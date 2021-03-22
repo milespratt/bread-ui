@@ -3,7 +3,7 @@ import React from "react";
 
 import CarouselStyles from "./Carousel.styles";
 
-import { Card, Button } from "../";
+import { Card } from "../";
 
 function Carousel(props) {
   return (
