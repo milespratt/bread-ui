@@ -18,7 +18,7 @@
   margin-top: 100px;
 }
 .component__section:first-of-type {
-  margin-top: 100vh;
+  margin-top: 20vh;
 }
 
 .component__name {
@@ -80,7 +80,7 @@
     margin-top: 100px;
   }
   .component__section:first-of-type {
-    margin-top: 100vh;
+    margin-top: 20vh;
   }
   .component__showcase__name {
     margin: 0px;

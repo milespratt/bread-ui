@@ -28,10 +28,10 @@ function App() {
   const [headerOpacity, setHeaderOpacity] = useState(1);
   useEffect(() => {
     console.log(window.onscroll);
-    const headerOpacity = 1 - window.scrollY / 500;
+    const headerOpacity = 1 - window.scrollY / 100;
     setHeaderOpacity(headerOpacity);
     window.onscroll = function () {
-      const headerOpacity = 1 - window.scrollY / 500;
+      const headerOpacity = 1 - window.scrollY / 100;
       if (headerOpacity > -1) {
         setHeaderOpacity(headerOpacity);
       }
@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <section style={{ opacity: headerOpacity }} className="page__header">
-        <h1>component library</h1>
+        <h1>breadUI</h1>
       </section>
 
       <div className="component__section">
