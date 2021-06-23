@@ -10,6 +10,7 @@ const types = {
     fontColor: "#282C36",
     text: "Default",
   },
+
   info: { backgroundColor: "#E7F5FC", fontColor: "#027BC3", text: "Info" },
   success: {
     backgroundColor: "#E5FAF3",
@@ -23,6 +24,8 @@ const types = {
     text: "Critical",
   },
 };
+
+types.button = types.reset = types.submit = types.default;
 
 function Button(props) {
   return (
@@ -49,7 +52,7 @@ function Button(props) {
 Button.defaultProps = {
   type: "default",
   secondary: false,
-  onClick: () => console.log("Give me something to do!"),
+  onClick: () => console.log("No click handler!"),
 };
 
 Button.propTypes = {

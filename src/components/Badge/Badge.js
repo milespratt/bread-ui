@@ -34,8 +34,8 @@ function Badge(props) {
         />
       )}
       <span className="badge__text">{props.text}</span>
-      {props.canRemove && (
-        <button className="badge__remove">
+      {props.canDismiss && (
+        <button className="badge__remove" onClick={() => props.onDismiss()}>
           <span className="badge__remove__icon"></span>
         </button>
       )}
@@ -45,16 +45,17 @@ function Badge(props) {
 
 Badge.defaultProps = {
   backgroundColor: "#282C36",
-  fontColor: "#F4F4F5",
-  thumbnailAlt: "Badge Thumbnail",
-  text: "Badge",
   canRemove: false,
+  fontColor: "#F4F4F5",
+  onDismiss: () => console.log("No badge dismiss handler!"),
+  text: "Badge",
+  thumbnailAlt: "Badge Thumbnail",
   type: "default",
 };
 
 Badge.propTypes = {
   backgroundColor: PropTypes.string,
-  canRemove: PropTypes.bool,
+  canDismiss: PropTypes.bool,
   fontColor: PropTypes.string,
   iconText: PropTypes.string,
   iconImage: PropTypes.string,

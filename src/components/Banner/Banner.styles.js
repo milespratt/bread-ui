@@ -30,8 +30,8 @@ const BannerStyles = styled.div`
   }
 
   .banner__dismiss {
-    background-color: ${(props) => props.fontColor};
-    color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.backgroundColor};
+    color: ${(props) => props.fontColor};
     border: none;
     cursor: pointer;
     display: flex;
@@ -44,7 +44,7 @@ const BannerStyles = styled.div`
   }
 
   .banner__dismiss:hover {
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.fontColor};
   }
 
   .banner__dismiss__icon {
@@ -59,12 +59,12 @@ const BannerStyles = styled.div`
     position: absolute;
     width: 10px;
     height: 2px;
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.fontColor};
   }
 
   .banner__dismiss:hover .banner__dismiss__icon:before,
   .banner__dismiss:hover .banner__dismiss__icon:after {
-    background-color: ${(props) => props.fontColor};
+    background-color: ${(props) => props.backgroundColor};
   }
 
   .banner__dismiss__icon:before {

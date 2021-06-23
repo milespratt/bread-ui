@@ -13,6 +13,12 @@
   width: 300px;
 }
 
+.components {
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
+
 .component__section {
   padding: 0px 20px;
   margin-top: 100px;

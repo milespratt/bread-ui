@@ -37,7 +37,7 @@ function Banner(props) {
           </div>
         )}
       </div>
-      <button className="banner__dismiss">
+      <button className="banner__dismiss" onClick={() => props.onDismiss()}>
         <span className="banner__dismiss__icon"></span>
       </button>
     </BannerStyles>
@@ -45,6 +45,7 @@ function Banner(props) {
 }
 
 Banner.defaultProps = {
+  onDismiss: () => console.log("No banner dismiss handler!"),
   title: "Banner Title",
   text: "Banner Text",
   type: "default",

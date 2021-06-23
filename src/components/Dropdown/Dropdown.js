@@ -6,11 +6,15 @@ import DropdownStyles from "./Dropdown.styles";
 function Dropdown(props) {
   return (
     <DropdownStyles>
-      <option hidden disabled selected value>
-        --chose an option--
-      </option>
-      <option>Option 1</option>
-      <option>Option 2</option>
+      <span className="dropdown__title">Dropdown Title</span>
+      <div className="dropdown__content">
+        <ul className="dropdown__list">
+          <li className="dropdown__item">Thing</li>
+          <li className="dropdown__item">Thing</li>
+          <li className="dropdown__item">Thing</li>
+          <li className="dropdown__item">Thing</li>
+        </ul>
+      </div>
     </DropdownStyles>
   );
 }

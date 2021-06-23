@@ -37,8 +37,8 @@ const BadgeStyles = styled.div`
     font-weight: bold;
   }
   .badge__remove {
-    background-color: ${(props) => props.fontColor};
-    color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.backgroundColor};
+    color: ${(props) => props.fontColor};
     border: none;
     cursor: pointer;
     display: flex;
@@ -51,7 +51,7 @@ const BadgeStyles = styled.div`
   }
 
   .badge__remove:hover {
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.fontColor};
   }
 
   .badge__remove__icon {
@@ -66,11 +66,11 @@ const BadgeStyles = styled.div`
     position: absolute;
     width: 8px;
     height: 2px;
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.fontColor};
   }
   .badge__remove:hover .badge__remove__icon:before,
   .badge__remove:hover .badge__remove__icon:after {
-    background-color: ${(props) => props.fontColor};
+    background-color: ${(props) => props.backgroundColor};
   }
 
   .badge__remove__icon:before {
