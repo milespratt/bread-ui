@@ -3,14 +3,7 @@ import PropTypes from "prop-types";
 import InputStyles from "./Input.styles";
 
 // input components
-import {
-  Select,
-  InputCheckbox,
-  InputRadio,
-  InputText,
-  InputRange,
-  InputSwitch,
-} from "./";
+import { Select, InputCheckbox, InputRadio, InputRange, InputSwitch } from "./";
 
 import { Button } from "../";
 
@@ -41,7 +34,7 @@ function Input(props) {
           />
         );
     }
-  }, [props.type]);
+  }, [props]);
   return (
     <InputStyles htmlFor={props.for}>
       <span className="input__label">{props.label || props.type}</span>
