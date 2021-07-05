@@ -4,6 +4,7 @@ export { default as Banner } from "./Banner/Banner";
 export { default as Button } from "./Button/Button";
 export { default as Card } from "./Card/Card";
 export { default as Carousel } from "./Carousel/Carousel";
+export { default as DismissButton } from "./DismissButton/DismissButton";
 export { default as Dropdown } from "./Dropdown/Dropdown";
 export { default as Icon } from "./Icon/Icon";
 export { default as Input } from "./Input/Input";
@@ -12,4 +13,5 @@ export { default as LoadingIndicator } from "./LoadingIndicator/LoadingIndicator
 export { default as Modal } from "./Modal/Modal";
 export { default as Tabs } from "./Tabs/Tabs";
 export { default as Toast } from "./Toast/Toast";
+export { default as ToastWrapper } from "./Toast/ToastWrapper";
 export { default as Tooltip } from "./Tooltip/Tooltip";

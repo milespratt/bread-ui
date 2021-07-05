@@ -10,7 +10,7 @@ function List(props) {
     <ListStyles>
       {props.listItems.map((listItem) => {
         return (
-          <div className="list__item">
+          <div key={Math.random() * 1000000} className="list__item">
             {listItem.icon && (
               <div className="list__icon">
                 <Avatar size="tiny" />

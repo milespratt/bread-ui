@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import defaultImg1 from "./assets/images/default1.jpg";
@@ -19,33 +19,35 @@ import {
   // InputText,
   List,
   LoadingIndicator,
-  // Modal,
-  // Tabs,
-  // Toast,
+  Modal,
+  Tabs,
+  Toast,
+  ToastWrapper,
   // Tooltip,
 } from "./components";
 
 function App() {
-  const [headerOpacity, setHeaderOpacity] = useState(1);
-  useEffect(() => {
-    console.log(window.onscroll);
-    const headerOpacity = 1 - window.scrollY / 100;
-    setHeaderOpacity(headerOpacity);
-    window.onscroll = function () {
-      const headerOpacity = 1 - window.scrollY / 100;
-      if (headerOpacity > -1) {
-        setHeaderOpacity(headerOpacity);
-      }
-    };
-    return function cleanup() {
-      window.onscroll = null;
-    };
-  }, []);
+  // const [headerOpacity, setHeaderOpacity] = useState(1);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [toasts, setToasts] = useState([]);
+  // useEffect(() => {
+  //   const headerOpacity = 1 - window.scrollY / 100;
+  //   setHeaderOpacity(headerOpacity);
+  //   window.onscroll = function () {
+  //     const headerOpacity = 1 - window.scrollY / 100;
+  //     if (headerOpacity > -1) {
+  //       setHeaderOpacity(headerOpacity);
+  //     }
+  //   };
+  //   return function cleanup() {
+  //     window.onscroll = null;
+  //   };
+  // }, []);
   return (
     <div className="App">
-      <section style={{ opacity: headerOpacity }} className="page__header">
+      {/* <section style={{ opacity: headerOpacity }} className="page__header">
         <h1>breadUI</h1>
-      </section>
+      </section> */}
 
       <div className="components">
         <div className="component__section">
@@ -310,7 +312,71 @@ function App() {
         <div className="component__section">
           <h1 className="component__name">Carousel</h1>
           <div className="component__showcase">
-            <Carousel />
+            <Carousel slidesOnScreen={2}>
+              <Card
+                cardTitle="Card Title One"
+                cardSections={[
+                  {
+                    content: ["This is a card with a title"],
+                  },
+                ]}
+              />
+              <Tabs />
+              <Card
+                cardTitle="Card Title"
+                iconText="Ca"
+                cardFooterActions={[
+                  { text: "Confirm", type: "success" },
+                  { text: "Cancel", type: "critical" },
+                ]}
+                cardActions={[
+                  { text: "Card Action", type: "info", secondary: true },
+                ]}
+                cardSections={[
+                  {
+                    content: ["This is a card with an action"],
+                  },
+                ]}
+              />
+              <List
+                listItems={[
+                  {
+                    icon: true,
+                    title: "List Item One",
+                    subtitle: "Subtitle One",
+                    controls: true,
+                  },
+                  {
+                    icon: true,
+                    title: "List Item Two",
+                    subtitle: "Subtitle Two",
+                    controls: true,
+                  },
+                  {
+                    icon: true,
+                    title: "List Item Two",
+                    subtitle: "Subtitle Three",
+                    controls: true,
+                  },
+                ]}
+              />
+              <Card
+                cardTitle="Card Title Three"
+                cardSections={[
+                  {
+                    content: ["This is a card with a title"],
+                  },
+                ]}
+              />
+              <Card
+                cardTitle="Card Title Four"
+                cardSections={[
+                  {
+                    content: ["This is a card with a title"],
+                  },
+                ]}
+              />
+            </Carousel>
           </div>
           {/* <h2 className="component__showcase__name">Default</h2> */}
         </div>
@@ -464,6 +530,61 @@ function App() {
           <h2 className="component__showcase__name">Default</h2>
           <div className="component__showcase">
             <LoadingIndicator />
+          </div>
+        </div>
+
+        <div className="component__section">
+          <h1 className="component__name">Modal</h1>
+          <h2 className="component__showcase__name">Default</h2>
+          <div className="component__showcase">
+            <Button onClick={() => setModalOpen(true)} text="Open Modal" />
+            {modalOpen && (
+              <Modal open={modalOpen} onDismiss={() => setModalOpen(false)} />
+            )}
+          </div>
+        </div>
+
+        <div className="component__section">
+          <h1 className="component__name">Tabs</h1>
+          <h2 className="component__showcase__name">Default</h2>
+          <div className="component__showcase">
+            <Tabs />
+          </div>
+        </div>
+
+        <div className="component__section">
+          <h1 className="component__name">Toast</h1>
+          <h2 className="component__showcase__name">Default</h2>
+          <div className="component__showcase">
+            <Button
+              onClick={() =>
+                setToasts([
+                  ...toasts,
+                  {
+                    text: "New toast",
+                    id: Math.random() * 1000000,
+                    type: "info",
+                  },
+                  {
+                    text: "New toast",
+                    id: Math.random() * 1000000,
+                    type: "warn",
+                  },
+                  {
+                    text: "New toast",
+                    id: Math.random() * 1000000,
+                    type: "success",
+                  },
+                  {
+                    text: "New toast",
+                    id: Math.random() * 1000000,
+                    type: "critical",
+                  },
+                ])
+              }
+              text="Add Toasts"
+            />
+            <ToastWrapper setToasts={setToasts} toasts={toasts} />
           </div>
         </div>
       </div>

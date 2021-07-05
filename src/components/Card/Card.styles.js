@@ -5,6 +5,7 @@ const CardStyles = styled.div`
   width: 100%;
   scroll-snap-align: center;
   // padding: 20px 0px;
+  box-sizing: border-box;
 
   .card__header {
     display: grid;

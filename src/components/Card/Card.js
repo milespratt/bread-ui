@@ -14,7 +14,7 @@ function Card(props) {
           <span className="card__title">{props.cardTitle}</span>
           <div className="card__actions">
             {props.cardActions.map((cardAction) => (
-              <Button {...cardAction} />
+              <Button key={Math.random() * 1000000} {...cardAction} />
             ))}
           </div>
         </header>
@@ -24,6 +24,7 @@ function Card(props) {
         {props.cardSections.map((cardSection) => {
           return (
             <div
+              key={Math.random() * 1000000}
               className={
                 cardSection.sub
                   ? "card__section card__section--sub"
@@ -40,7 +41,10 @@ function Card(props) {
                   {cardSection.header.actions &&
                     cardSection.header.actions.map((action) => {
                       return (
-                        <div className="card__section__actions">
+                        <div
+                          className="card__section__actions"
+                          key={Math.random() * 1000000}
+                        >
                           <Button
                             secondary={action.secondary}
                             text={action.text}
@@ -53,7 +57,7 @@ function Card(props) {
               )}
               <div className="card__section__content">
                 {cardSection.content.map((content) => (
-                  <p>{content}</p>
+                  <p key={Math.random() * 1000000}>{content}</p>
                 ))}
               </div>
               {cardSection.actions && (
@@ -64,6 +68,7 @@ function Card(props) {
                         secondary={action.secondary}
                         text={action.text}
                         type={action.type}
+                        key={Math.random() * 1000000}
                       />
                     );
                   })}
@@ -81,6 +86,7 @@ function Card(props) {
                 secondary={action.secondary}
                 text={action.text}
                 type={action.type}
+                key={Math.random() * 1000000}
               />
             );
           })}
