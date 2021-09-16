@@ -83,7 +83,7 @@ export default function Form(props) {
         if (field.fieldset) {
           return (
             <Fieldset
-              key={field.fieldset.legend}
+              key={field.legend}
               {...field}
               errors={errors}
               values={values}
