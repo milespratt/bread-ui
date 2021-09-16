@@ -11,7 +11,10 @@ function Card(props) {
           {(props.iconText || props.iconImage) && (
             <Avatar size="tiny" text={props.iconText} image={props.iconImage} />
           )}
-          <span className="card__title">{props.cardTitle}</span>
+          <div className="card__heading">
+            <span className="card__title">{props.cardTitle}</span>
+            <span className="card__subtitle">{props.cardSubtitle}</span>
+          </div>
           <div className="card__actions">
             {props.cardActions.map((cardAction) => (
               <Button key={Math.random() * 1000000} {...cardAction} />

@@ -13,7 +13,7 @@ const BannerStyles = styled.div`
 
   .banner__title {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 20px;
     color: ${(props) => props.fontColor};
     white-space: nowrap;

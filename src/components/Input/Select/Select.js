@@ -5,7 +5,13 @@ import SelectStyles from "./Select.styles";
 
 function Select(props) {
   return (
-    <SelectStyles defaultValue="none">
+    <SelectStyles
+      name={props.name}
+      defaultValue="none"
+      onChange={props.onChange}
+      id={props.id}
+      hasError={props.error}
+    >
       <option hidden disabled value="none">
         --chose an option--
       </option>

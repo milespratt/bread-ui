@@ -24,6 +24,7 @@ Avatar.defaultProps = {
   text: "AV",
   textColor: "#F4F4F5",
   size: "small",
+  radius: false,
 };
 
 Avatar.propTypes = {

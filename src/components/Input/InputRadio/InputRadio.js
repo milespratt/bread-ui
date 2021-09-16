@@ -5,13 +5,14 @@ import InputRadioStyles from "./InputRadio.styles";
 
 function InputRadio(props) {
   return (
-    <InputRadioStyles>
+    <InputRadioStyles hasError={props.error}>
       <>
         <input
           id={props.id}
           type="radio"
-          // checked={props.checked}
-          // onChange={props.onChange}
+          name={props.name}
+          value={props.value}
+          onChange={props.onChange}
         />
         <span className="checkmark"></span>
       </>

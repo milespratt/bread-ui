@@ -4,13 +4,15 @@ import PropTypes from "prop-types";
 import InputSwitchStyles from "./InputSwitch.styles";
 
 function InputSwitch(props) {
-  const [toggled, setToggled] = useState(false);
+  const [active, setActive] = useState(props.active);
   return (
     <InputSwitchStyles
-      // toggled={props.toggled}
-      // onClick={() => props.toggle(!props.toggled)}
-      toggled={toggled}
-      onClick={() => setToggled(!toggled)}
+      id={props.id}
+      active={active}
+      onClick={() => setActive(!active)}
+      name={props.name}
+      hasError={props.error}
+      type="button"
     >
       <div className="input__switch__indicator"></div>
     </InputSwitchStyles>
@@ -19,12 +21,10 @@ function InputSwitch(props) {
 
 InputSwitch.defaultProps = {
   toggled: true,
-  toggle: () => console.log("No toggle"),
 };
 
 InputSwitch.propTypes = {
-  toggled: PropTypes.bool,
-  toggle: PropTypes.func,
+  active: PropTypes.bool,
 };
 
 export default InputSwitch;

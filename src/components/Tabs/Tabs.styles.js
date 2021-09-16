@@ -4,6 +4,7 @@ const TabsStyles = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  box-sizing: border-box;
   .tabs {
     display: grid;
     grid-auto-flow: column;
@@ -24,6 +25,7 @@ const TabsStyles = styled.div`
     z-index: -1;
   }
   .tab {
+    font-size: 0.8rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -31,6 +33,7 @@ const TabsStyles = styled.div`
     outline: none;
     padding: 10px 0;
     white-space: nowrap;
+    margin: 0;
   }
 
   .tab:hover {
@@ -46,8 +49,15 @@ const TabsStyles = styled.div`
     color: #027bc3;
   }
 
+  .tab__content--hidden {
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+  }
+
   .content {
-    width: 100%;
+    /* width: 100%; */
+    position: relative;
   }
   .tab__content {
     width: 100%;

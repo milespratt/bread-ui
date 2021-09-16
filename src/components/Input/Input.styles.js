@@ -7,17 +7,27 @@ const InputStyles = styled.label`
   grid-row-gap: 3px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 13px;
   align-items: center;
+  position: relative;
+  /* max-width: 300px; */
 
   .input__label {
+    font-size: 0.8rem;
+  }
+
+  .input__error {
+    color: #e32a22;
+    position: absolute;
+    bottom: -15px;
   }
 
   input {
-    border-radius: 0%;
-    border: 2px solid #282c36;
-    padding: 3px;
-    min-height: 20px;
+    border-radius: 0% !important;
+    border: 2px solid ${(props) => (props.hasError ? "#E32A22" : "#282c36")};
+    padding: 0px 5px;
+    height: 30px;
+    box-sizing: border-box;
+    width: 100%auto;
   }
 
   input[type="search"] {
@@ -49,6 +59,17 @@ const InputStyles = styled.label`
     border: none;
     padding: 0;
     background-color: none;
+  }
+  textarea {
+    border-radius: 0% !important;
+    border: 2px solid ${(props) => (props.hasError ? "#E32A22" : "#282c36")};
+    padding: 3px;
+    min-height: 50px;
+    outline: none;
+  }
+  textarea:focus {
+    outline: none;
+    border: 2px solid #027bc3;
   }
 `;
 

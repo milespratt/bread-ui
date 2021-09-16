@@ -8,8 +8,8 @@
     "@testing-library/user-event": "^12.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
-    "react-spring": "^9.2.3",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.1.0"
   },
@@ -17,7 +17,14 @@
     "start": "cross-env BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:npm": "rm -rf dist && mkdir dist && babel src/components -d dist --copy-files && cp README.md dist && cp package-npm.json dist/package.json",
+    "publish": "npm run build:npm && cd dist && npm publish"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +45,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/preset-react": "^7.14.5",
     "cross-env": "^7.0.3",
     "react-docgen": "^5.3.1"
   }

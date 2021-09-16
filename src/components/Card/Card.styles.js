@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const CardStyles = styled.div`
   border: 2px solid #282c36;
-  width: 100%;
+  width: calc(100% - 2px);
   scroll-snap-align: center;
   // padding: 20px 0px;
   box-sizing: border-box;
@@ -14,6 +14,7 @@ const CardStyles = styled.div`
     align-items: center;
     padding: 0px 20px;
     margin-top: 20px;
+    /* margin-bottom: 20px; */
   }
 
   .card__actions {
@@ -22,15 +23,19 @@ const CardStyles = styled.div`
     align-items: center;
   }
 
+  .card__heading {
+    display: flex;
+    flex-direction: column;
+  }
+
   .card__title {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
     white-space: nowrap;
   }
-
-  .card__body {
+  .card__subtitle {
+    font-weight: 300;
   }
-
   .card__section {
     padding: 20px 20px;
     display: grid;
@@ -45,6 +50,7 @@ const CardStyles = styled.div`
   }
   .card__section:first-child {
     border: none;
+    /* padding-top: 0px !important; */
   }
   .card__section--sub + .card__section--sub {
     padding: 20px 0px;
@@ -58,11 +64,11 @@ const CardStyles = styled.div`
     justify-content: space-between;
   }
   .card__section__title {
-    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     display: block;
     margin-bottom: 10px;
+    font-size: 0.8rem;
   }
 
   .card__section__content {

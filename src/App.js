@@ -12,43 +12,19 @@ import {
   Carousel,
   Dropdown,
   Input,
-  // Icon,
-  // InputCheckbox,
-  // InputRadio,
-  // InputSwitch,
-  // InputText,
+  Form,
   List,
   LoadingIndicator,
   Modal,
   Tabs,
-  // Toast,
   ToastWrapper,
-  // Tooltip,
 } from "./components";
 
 function App() {
-  // const [headerOpacity, setHeaderOpacity] = useState(1);
   const [modalOpen, setModalOpen] = useState(false);
   const [toasts, setToasts] = useState([]);
-  // useEffect(() => {
-  //   const headerOpacity = 1 - window.scrollY / 100;
-  //   setHeaderOpacity(headerOpacity);
-  //   window.onscroll = function () {
-  //     const headerOpacity = 1 - window.scrollY / 100;
-  //     if (headerOpacity > -1) {
-  //       setHeaderOpacity(headerOpacity);
-  //     }
-  //   };
-  //   return function cleanup() {
-  //     window.onscroll = null;
-  //   };
-  // }, []);
   return (
     <div className="App">
-      {/* <section style={{ opacity: headerOpacity }} className="page__header">
-        <h1>breadUI</h1>
-      </section> */}
-
       <div className="components">
         <div className="component__section">
           <h1 className="component__name">Avatar</h1>
@@ -321,6 +297,12 @@ function App() {
                   },
                 ]}
               />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+                quam libero ea nihil recusandae. Incidunt, illum esse culpa,
+                possimus mollitia minus nisi, dolor velit sint debitis
+                voluptatum ipsum distinctio. Dolore.
+              </p>
               <Tabs />
               <Card
                 cardTitle="Card Title"
@@ -393,31 +375,199 @@ function App() {
           <h1 className="component__name">Inputs</h1>
           <div className="component__showcase">
             {/* <Input type="button" /> */}
-            <Input for="checkbox" type="checkbox" />
+            <Input
+              for="checkbox"
+              type="checkbox"
+              label="checkbox"
+              name="checkbox"
+            />
             {/* <Input for="color" type="color" /> */}
-            <Input for="date" type="date" />
-            <Input for="datetime-local" type="datetime-local" />
-            <Input for="email" type="email" />
-            <Input for="file" type="file" />
+            <Input for="date" type="date" label="date" name="date" />
+            <Input
+              for="datetime-local"
+              type="datetime-local"
+              label="datetime-local"
+              name="datetime-local"
+            />
+            <Input for="email" type="email" label="email" name="email" />
+            <Input for="file" type="file" label="file" name="file" />
             {/* <Input for="hidden" type="hidden" /> */}
             {/* <Input for="image" type="image" src={defaultImg1} /> */}
-            <Input for="month" type="month" />
-            <Input for="number" type="number" />
-            <Input for="password" type="password" />
-            <Input for="radio" type="radio" />
-            <Input for="range" type="range" />
-            {/* <Input for="reset" type="reset" /> */}
-            <Input for="search" type="search" />
-            <Input for="select" type="select" />
-            <Input for="submit" type="submit" />
-            <Input for="switch" type="switch" />
-            <Input for="tel" type="tel" />
-            <Input for="text" type="text" />
-            <Input for="time" type="time" />
-            <Input for="url" type="url" />
-            <Input for="week" type="week" />
+            <Input for="month" type="month" label="month" name="month" />
+            <Input for="number" type="number" label="number" name="number" />
+            <Input
+              for="password"
+              type="password"
+              label="password"
+              name="password"
+            />
+            <Input
+              for="radio"
+              type="radio"
+              label="radio"
+              name="radio"
+              value="radio button!"
+            />
+            <Input for="range" type="range" label="range" name="range" />
+            {/* <Input for="reset" type="reset" label="checkbox" name="checkbox"/> */}
+            <Input for="search" type="search" label="search" name="search" />
+            <Input for="select" type="select" label="select" name="select" />
+            <Input
+              for="textarea"
+              type="textarea"
+              label="textarea"
+              name="textarea"
+            />
+            <Input for="switch" type="switch" label="switch" name="switch" />
+            <Input for="tel" type="tel" label="tel" name="tel" />
+            <Input for="text" type="text" label="text" name="text" />
+            <Input for="time" type="time" label="time" name="time" />
+            <Input for="url" type="url" label="url" name="url" />
+            <Input for="week" type="week" label="week" name="week" />
           </div>
           {/* <h2 className="component__showcase__name">Default</h2> */}
+        </div>
+
+        <div className="component__section">
+          <h1 className="component__name">Form</h1>
+          <div className="component__showcase">
+            <Form
+              title={"Really Important Form"}
+              description={
+                "This is a form. It presents inputs to the user and will POST the values when submitted."
+              }
+              fields={[
+                {
+                  label: "Checkbox Input",
+                  name: "Checkbox Input",
+                  type: "checkbox",
+                  value: "check me out!",
+                  checked: false,
+                },
+                {
+                  label: "Text Input",
+                  name: "Text Input",
+                  type: "text",
+                  value: "",
+                },
+                {
+                  label: "Date Input",
+                  name: "Date Input",
+                  type: "date",
+                  value: "",
+                },
+                {
+                  label: "Datetime Input",
+                  name: "Datetime Input",
+                  type: "datetime-local",
+                  value: "",
+                },
+                {
+                  label: "Email Input",
+                  name: "Email Input",
+                  type: "email",
+                  value: "",
+                },
+                {
+                  label: "Month Input",
+                  name: "Month Input",
+                  type: "month",
+                  value: "",
+                },
+                {
+                  label: "Number Input",
+                  name: "Number Input",
+                  type: "number",
+                  value: "",
+                },
+                {
+                  label: "Password Input",
+                  name: "Password Input",
+                  type: "password",
+                  value: "",
+                },
+                {
+                  fieldset: true,
+                  legend: "Favorite Burger",
+                  fields: [
+                    {
+                      label: "Sloppy",
+                      name: "Favorite Burger",
+                      type: "radio",
+                      value: "slops",
+                    },
+                    {
+                      label: "Burnt",
+                      name: "Favorite Burger",
+                      type: "radio",
+                      value: "burnt",
+                    },
+                    {
+                      label: "Criminal",
+                      name: "Favorite Burger",
+                      type: "radio",
+                      value: "criminal",
+                    },
+                  ],
+                },
+
+                {
+                  label: "Range Input",
+                  name: "Range Input",
+                  type: "range",
+                  value: 25,
+                },
+                {
+                  label: "Search Input",
+                  name: "Search Input",
+                  type: "search",
+                  value: "",
+                },
+                {
+                  label: "Select Input",
+                  name: "Select Input",
+                  type: "select",
+                  value: "",
+                },
+                {
+                  label: "Text Area",
+                  name: "Text Area",
+                  type: "textarea",
+                  value: "",
+                },
+                {
+                  label: "Switch",
+                  name: "Switch",
+                  type: "switch",
+                  value: "",
+                },
+                {
+                  label: "Telephone Input",
+                  name: "Telephone Input",
+                  type: "tel",
+                  value: "",
+                },
+                {
+                  label: "Time Input",
+                  name: "Time Input",
+                  type: "time",
+                  value: "",
+                },
+                {
+                  label: "Url Input",
+                  name: "Url Input",
+                  type: "url",
+                  value: "",
+                },
+                {
+                  label: "Week Input",
+                  name: "Week Input",
+                  type: "week",
+                  value: "",
+                },
+              ]}
+            />
+          </div>
         </div>
 
         <div className="component__section">
@@ -588,6 +738,140 @@ function App() {
           </div>
         </div>
       </div>
+      {/* <div className="sample__app">
+        <div className="sample__app__content sample__app__left">
+          <Card cardTitle="Card Title" iconText="Ca" />
+          <List
+            listItems={[
+              {
+                icon: { text: "Ho" },
+                title: "Home",
+                controls: null,
+              },
+              {
+                icon: { text: "Pe" },
+                title: "People",
+                controls: null,
+              },
+              {
+                icon: { text: "Ph" },
+                title: "Photos",
+                controls: null,
+              },
+              {
+                icon: { text: "Ne" },
+                title: "News Feed",
+                controls: null,
+              },
+              {
+                icon: { text: "Pr" },
+                title: "Profile",
+                controls: null,
+              },
+              {
+                icon: { text: "Se" },
+                title: "Settings",
+                controls: null,
+              },
+            ]}
+          />
+        </div>
+        <div className="sample__app__content sample__app__center">
+          <Carousel slidesOnScreen={5}>
+            {images.map((image, i) => {
+              return (
+                <img
+                  key={`image-${i}`}
+                  className="card__image"
+                  src={image.default}
+                />
+              );
+            })}
+          </Carousel>
+          <Tabs />
+          <Card
+            cardTitle="Card Title"
+            iconText="Ca"
+            cardActions={[
+              { text: "Card Action", type: "info", secondary: true },
+            ]}
+            cardSections={[
+              {
+                content: ["This is a card with an action"],
+              },
+            ]}
+          />
+          <Card
+            cardTitle="Card Title"
+            iconText="Ca"
+            cardActions={[
+              { text: "Card Action", type: "info", secondary: true },
+            ]}
+            cardSections={[
+              {
+                content: ["This is a card with an action"],
+              },
+            ]}
+          />
+          <Card
+            cardTitle="Card Title"
+            iconText="Ca"
+            cardActions={[
+              { text: "Card Action", type: "info", secondary: true },
+            ]}
+            cardSections={[
+              {
+                content: ["This is a card with an action"],
+              },
+            ]}
+          />
+        </div>
+        <div className="sample__app__content sample__app__right">
+          <Card
+            cardTitle="Card Title"
+            iconText="Ca"
+            cardFooterActions={[
+              { text: "Confirm", type: "success" },
+              { text: "Cancel", type: "critical" },
+            ]}
+            cardSections={[
+              {
+                content: ["This is a card with an action"],
+              },
+            ]}
+          />
+          <Card
+            cardTitle="Card Title"
+            cardSubtitle="Technology"
+            iconText="Ca"
+            cardFooterActions={[
+              { text: "Confirm", type: "success" },
+              { text: "Cancel", type: "critical" },
+            ]}
+            cardSections={[
+              {
+                content: ["This is a card with an action"],
+              },
+            ]}
+          />
+          <List
+            listItems={colors.map((color, i) => {
+              return {
+                icon: {
+                  backgroundColor: color,
+                  text: "AM",
+                  image: people[i].default,
+                  size: "tiny",
+                  radius: true,
+                },
+                title: "Amanda Mills",
+                controls: null,
+                subtitle: "Technology",
+              };
+            })}
+          />
+        </div>
+      </div> */}
     </div>
   );
 }

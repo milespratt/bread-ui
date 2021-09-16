@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 const SelectStyles = styled.select`
-  border: 2px solid #282c36;
+  border: 2px solid ${(props) => (props.hasError ? "#E32A22" : "#282c36")};
   border-radius: 0;
   background: none;
-  padding: 3px;
-  min-height: 30px;
+  padding: 0px 5px;
+  height: 30px;
+  box-sizing: border-box;
   background-image: none;
   -webkit-appearance: none;
   outline: none;
@@ -14,6 +15,10 @@ const SelectStyles = styled.select`
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.65em auto, 100%;
   padding-right: 30px;
+  &&:focus {
+    outline: none;
+    border: 2px solid #027bc3;
+  }
 `;
 
 export default SelectStyles;

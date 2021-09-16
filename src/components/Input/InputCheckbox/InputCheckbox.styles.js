@@ -28,12 +28,13 @@ const InputCheckboxStyles = styled.div`
     position: relative;
     top: 0;
     left: 0;
-    height: 19px;
-    width: 19px;
-    border: 2px solid #282c36;
+    height: 26px;
+    width: 26px;
+    border: 2px solid ${(props) => (props.hasError ? "#E32A22" : "#282c36")};
   }
 
-  .checkmark:hover {
+  .checkmark:hover,
+  input:focus ~ .checkmark {
     border: 2px solid #027bc3;
   }
 
@@ -51,8 +52,8 @@ const InputCheckboxStyles = styled.div`
 
   /* Style the checkmark/indicator */
   .checkmark:after {
-    height: 15px;
-    width: 15px;
+    height: 22px;
+    width: 22px;
     top: 2px;
     left: 2px;
     background-color: #282c36;

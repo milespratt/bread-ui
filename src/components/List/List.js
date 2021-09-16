@@ -13,7 +13,10 @@ function List(props) {
           <div key={Math.random() * 1000000} className="list__item">
             {listItem.icon && (
               <div className="list__icon">
-                <Avatar size="tiny" />
+                <Avatar
+                  {...listItem.icon}
+                  size={listItem.icon.size || "tiny"}
+                />
               </div>
             )}
             <div className="list__item__content">

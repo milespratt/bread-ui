@@ -37,7 +37,7 @@ function Carousel(props) {
       }px)`;
 
       setTimeout(() => {
-        slideContainer.current.style.transition = "transform 200ms ease";
+        slideContainer.current.style.transition = "transform 300ms ease";
         slideContainer.current.style.transform = `translate(${0}px)`;
       }, 50);
 
@@ -58,7 +58,7 @@ function Carousel(props) {
       setSlides(newSlides);
 
       setTimeout(() => {
-        slideContainer.current.style.transition = "transform 200ms ease";
+        slideContainer.current.style.transition = "transform 300ms ease";
         slideContainer.current.style.transform = `translate(-${
           slideContainer.current.clientWidth /
           (showAllSlides.current ? slides.length + 1 : slides.length)

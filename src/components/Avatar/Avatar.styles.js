@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const sizes = {
-  micro: { fontSize: "10px", imageSize: "20px" },
-  tiny: { fontSize: "20px", imageSize: "40px" },
-  small: { fontSize: "50px", imageSize: "100px" },
-  medium: { fontSize: "80px", imageSize: "150px" },
-  large: { fontSize: "120px", imageSize: "200px" },
+  micro: { fontSize: "0.7rem", imageSize: "20px" },
+  tiny: { fontSize: "1.5rem", imageSize: "40px" },
+  small: { fontSize: "3rem", imageSize: "100px" },
+  medium: { fontSize: "5rem", imageSize: "150px" },
+  large: { fontSize: "8rem", imageSize: "200px" },
 };
 
 const AvatarStyles = styled.div`
@@ -15,6 +15,7 @@ const AvatarStyles = styled.div`
   height: ${(props) => sizes[props.size].imageSize};
   justify-content: center;
   width: ${(props) => sizes[props.size].imageSize};
+  overflow: hidden;
   .avatar__text {
     color: ${(props) => props.textColor};
     font-size: ${(props) => sizes[props.size].fontSize};

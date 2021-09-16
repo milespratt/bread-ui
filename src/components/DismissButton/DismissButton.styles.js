@@ -26,8 +26,8 @@ const DismissButtonStyles = styled.button`
   .dismiss__icon:after {
     content: "";
     position: absolute;
-    width: ${(props) => (props.size === "large" ? "25px" : "12px")};
-    height: ${(props) => (props.size === "large" ? "3px" : "2px")};
+    width: ${(props) => (props.size === "large" ? "24px" : "12px")};
+    height: ${(props) => (props.size === "large" ? "2px" : "2px")};
     background-color: ${(props) => props.fontColor};
   }
   &&:hover .dismiss__icon:before,

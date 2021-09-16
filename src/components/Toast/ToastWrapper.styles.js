@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 
-const ToastWrapperStyles = styled(animated.div)`
+const ToastWrapperStyles = styled.div`
   position: fixed;
   top: 10px;
   left: 0;

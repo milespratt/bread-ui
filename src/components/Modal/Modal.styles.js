@@ -1,13 +1,12 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 
-const ModalStyles = styled(animated.div)`
+const ModalStyles = styled.div`
   bottom: 0;
   height: 100vh;
   left: 0;
   position: fixed;
   width: 100vw;
-  z-index: 1000;
+  z-index: 1000000;
   display: grid;
 
   .modal__background {

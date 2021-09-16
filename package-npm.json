@@ -1,0 +1,28 @@
+{
+    "name": "bread-ui",
+    "description": "A React component library",
+    "author": {
+      "name": "Miles Pratt",
+      "email": "miles@thoughtpowder.com",
+      "url": "https://github.com/milespratt"
+    },
+    "keywords": [
+      "component library",
+      "react component library",
+      "react components",
+      "react library"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/milespratt/bread-ui"
+    },
+    "version": "1.0.3",
+    "private": false,
+    "license": "MIT",
+    "module": "index.js",
+    "peerDependencies": {
+      "react": ">= 16.12.0",
+      "react-icons": ">= 4.2.0",
+      "styled-components": ">= 5.2.1"
+    }
+  }

@@ -1,16 +1,10 @@
 import React, { useEffect } from "react";
-import { useSpring } from "react-spring";
-// import PropTypes from "prop-types";
 
 import ModalStyles from "./Modal.styles";
 
 import { Button, DismissButton } from "../";
 
 function Modal(props) {
-  const modalAnimation = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-  });
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return function cleanup() {
@@ -18,7 +12,7 @@ function Modal(props) {
     };
   });
   return (
-    <ModalStyles style={modalAnimation}>
+    <ModalStyles>
       <button
         className="modal__background"
         onClick={() => props.onDismiss()}

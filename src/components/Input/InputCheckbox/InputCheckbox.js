@@ -5,13 +5,15 @@ import InputCheckboxStyles from "./InputCheckbox.styles";
 
 function InputCheckbox(props) {
   return (
-    <InputCheckboxStyles>
+    <InputCheckboxStyles hasError={props.error}>
       <>
         <input
           id={props.id}
           type="checkbox"
-          // checked={props.checked}
-          // onChange={props.onChange}
+          defaultChecked={props.checked}
+          value={props.value}
+          onChange={props.onChange}
+          name={props.name}
         />
         <span className="checkmark"></span>
       </>

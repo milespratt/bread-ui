@@ -6,6 +6,8 @@ export { default as Card } from "./Card/Card";
 export { default as Carousel } from "./Carousel/Carousel";
 export { default as DismissButton } from "./DismissButton/DismissButton";
 export { default as Dropdown } from "./Dropdown/Dropdown";
+export { default as Form } from "./Form/Form";
+export { default as Fieldset } from "./Fieldset/Fieldset";
 export { default as Icon } from "./Icon/Icon";
 export { default as Input } from "./Input/Input";
 export { default as List } from "./List/List";

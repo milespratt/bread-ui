@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 
-const ToastStyles = styled(animated.div)`
+const ToastStyles = styled.div`
   background: ${(props) => props.backgroundColor};
   border: ${(props) => `2px solid ${props.fontColor}`};
   color: ${(props) => props.fontColor};

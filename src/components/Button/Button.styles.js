@@ -9,8 +9,10 @@ const ButtonStyles = styled.button`
   font-weight: bold;
   padding: ${(props) => (props.secondary ? "0" : "10px")};
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   white-space: nowrap;
+  font-size: 0.8rem;
   &&:hover,
   &&:active,
   &&:focus {

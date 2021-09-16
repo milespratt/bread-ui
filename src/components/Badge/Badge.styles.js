@@ -13,19 +13,10 @@ const BadgeStyles = styled.div`
     );
   padding: 5px;
   align-items: center;
-  .badge__icon,
+
   .badge__thumbnail {
     height: 20px;
     width: 20px;
-  }
-  .badge__icon {
-    background-color: ${(props) => props.fontColor};
-    color: ${(props) => props.backgroundColor};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    font-weight: bold;
   }
 
   .badge__thumbnail {
@@ -33,7 +24,7 @@ const BadgeStyles = styled.div`
   }
   .badge__text {
     color: ${(props) => props.fontColor};
-    font-size: 12px;
+    font-size: 0.8rem;
     font-weight: bold;
   }
   .badge__remove {
@@ -44,7 +35,7 @@ const BadgeStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 12px;
+    height: 12px !important;
     width: 12px;
     justify-self: end;
     margin-left: 8px;

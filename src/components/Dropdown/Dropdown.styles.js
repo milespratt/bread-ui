@@ -23,6 +23,7 @@ const DropdownStyles = styled.div`
     width: 100%;
     left: -2px;
     border: 2px solid #282c36;
+    z-index: 1000;
   }
   .dropdown__content:before {
     height: 4px;
