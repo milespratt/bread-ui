@@ -34,7 +34,10 @@ export default function FileUpload(props) {
     }
   }
   function handleFiles(files) {
-    setFilesToUpload(files);
+    if (files.length > 0) {
+
+      setFilesToUpload(files);
+    }
   }
   // function handleSubmit(event) {
   //   event.preventDefault();
@@ -95,7 +98,7 @@ export default function FileUpload(props) {
         ref={fileInput}
         type="file"
         multiple
-        accept="image/*"
+        accept={props.accept}
         onChange={(e) => handleFiles(e.target.files)}
       />
       <span>
@@ -118,4 +121,8 @@ export default function FileUpload(props) {
       )}
     </FileUploadStyles>
   );
+}
+
+FileUpload.defaultProps = {
+  accept: "audio/*,video/*,image/*"
 }

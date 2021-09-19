@@ -7,7 +7,7 @@ import { DismissButton } from "../";
 
 const types = {
   default: {
-    backgroundColor: "#F4F4F5",
+    backgroundColor: "#EAEAEC",
     fontColor: "#282C36",
     text: "Default",
   },

@@ -22,7 +22,7 @@ Avatar.defaultProps = {
   alt: "Avatar Image",
   backgroundColor: "#282C36",
   text: "AV",
-  textColor: "#F4F4F5",
+  textColor: "#EAEAEC",
   size: "small",
   radius: false,
 };

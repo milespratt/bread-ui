@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 import FormStyles from "./Form.styles.js";
 
-import { Input, Button, Fieldset } from "../";
+import { Input, Button, Fieldset, LoadingIndicator } from "../";
 
 export default function Form(props) {
+  const [loading, setLoading] = useState(false);
   const [values, setValues] = useState(
     Object.fromEntries(
       props.fields
@@ -40,7 +41,6 @@ export default function Form(props) {
   );
   function handleChange(e) {
     const { type, name, checked, value } = e.target;
-    console.log(type, name, checked, value);
     const newValues = Object.assign({}, values);
     if (type === "checkbox" && !checked) {
       delete newValues[name];
@@ -51,26 +51,30 @@ export default function Form(props) {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(values);
+    setLoading(true);
 
     // set random errors for testing
-    setErrors(
-      Object.fromEntries(
-        props.fields.map((field) => {
-          if (field.fieldset) {
-            return field.fields.flatMap((fieldsetField) => [
-              fieldsetField.name,
-              Math.random() > 0.5 ? "error" : null,
-            ]);
-          } else {
-            return [field.name, Math.random() > 0.5 ? "error" : null];
-          }
-        })
-      )
-    );
+    setTimeout(() => {
+      setLoading(false);
+      setErrors(
+        Object.fromEntries(
+          props.fields.map((field) => {
+            if (field.fieldset) {
+              return field.fields.flatMap((fieldsetField) => [
+                fieldsetField.name,
+                Math.random() > 0.5 ? "error" : null,
+              ]);
+            } else {
+              return [field.name, Math.random() > 0.5 ? "error" : null];
+            }
+          })
+          )
+          );
+        }, 2000);
   }
   return (
     <FormStyles onSubmit={handleSubmit}>
+      <div className={loading ? "form__loader" : "form__loader form__loader--hidden"}><LoadingIndicator /></div>
       {(props.title || props.description) && (
         <header className="form__header">
           {props.title && <h2 className="form__heading">{props.title}</h2>}

@@ -68,8 +68,8 @@ const CarouselStyles = styled.div`
   .carousel__control--next:before {
     position: absolute;
     content: "";
-    border-left: 4px solid #f4f4f5;
-    border-top: 4px solid #f4f4f5;
+    border-left: 4px solid #EAEAEC;
+    border-top: 4px solid #EAEAEC;
     transform: rotate(-45deg);
     height: 1rem;
     width: 1rem;

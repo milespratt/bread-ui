@@ -50,7 +50,6 @@ function Carousel(props) {
       };
     }
     if (direction === "next") {
-      console.log("next!");
       const newSlides = [...slides];
       if (showAllSlides.current) {
         newSlides.push(slides[0]);

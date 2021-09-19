@@ -17,7 +17,7 @@ const InputRangeStyles = styled.input`
     font-size: 10px;
     position: absolute;
     transition: transform 200ms ease;
-    color: #f4f4f5;
+    color: #EAEAEC;
     pointer-events: none;
     bottom: 9px;
     left: 0px;

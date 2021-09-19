@@ -431,8 +431,37 @@ function App() {
         <div className="component__section">
           <h1 className="component__name">Form</h1>
           <div className="component__showcase">
+            <Form title="Sign In" fields={[{
+                  label: "Username",
+                  name: "usernam-signin",
+                  type: "text",
+                  value: "",
+                  placeholder: "username"
+                },{
+                  label: "Password",
+                  name: "Password-signin",
+                  type: "password",
+                  value: "",
+                },]} />
+                <Form title="Sign Up" fields={[{
+                  label: "Username",
+                  name: "username-signup",
+                  type: "text",
+                  value: "",
+                  placeholder: "username"
+                },{
+                  label: "Password",
+                  name: "password-signup",
+                  type: "password",
+                  value: "",
+                },{
+                  label: "Confirm Password",
+                  name: "password-signup-confirm",
+                  type: "password",
+                  value: "",
+                },]} />
             <Form
-              title={"Really Important Form"}
+              title="Really Important Form"
               description={
                 "This is a form. It presents inputs to the user and will POST the values when submitted."
               }

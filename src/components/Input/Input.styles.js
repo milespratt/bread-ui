@@ -19,6 +19,7 @@ const InputStyles = styled.label`
     color: #e32a22;
     position: absolute;
     bottom: -15px;
+    font-size: 0.7rem;
   }
 
   input {

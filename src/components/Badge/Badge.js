@@ -6,7 +6,7 @@ import BadgeStyles from "./Badge.styles";
 
 const types = {
   default: {
-    fontColor: "#F4F4F5",
+    fontColor: "#EAEAEC",
     backgroundColor: "#282C36",
   },
   info: { fontColor: "#E7F5FC", backgroundColor: "#027BC3" },
@@ -46,7 +46,7 @@ function Badge(props) {
 Badge.defaultProps = {
   backgroundColor: "#282C36",
   canRemove: false,
-  fontColor: "#F4F4F5",
+  fontColor: "#EAEAEC",
   onDismiss: () => console.log("No badge dismiss handler!"),
   text: "Badge",
   thumbnailAlt: "Badge Thumbnail",

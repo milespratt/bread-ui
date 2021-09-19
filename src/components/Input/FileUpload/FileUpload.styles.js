@@ -19,6 +19,7 @@ const FileUploadStyles = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   white-space: nowrap;
+  font-size: .9rem;
   progress {
     width: 100%;
     border-radius: 0;

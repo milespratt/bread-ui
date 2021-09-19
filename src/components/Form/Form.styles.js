@@ -7,6 +7,26 @@ const FormStyles = styled.form`
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  position: relative;
+  .form__loader {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 1;
+    transition: all 250ms ease;
+    pointer-events: all;
+  }
+  .form__loader--hidden {
+opacity: 0;
+pointer-events: none;
+  }
   .form__header {
   }
   .form__heading {

@@ -87,7 +87,7 @@ const CardStyles = styled.div`
   }
 
   .card__section--dim {
-    background-color: #f4f4f5;
+    background-color: #EAEAEC;
   }
 
   .card__footer {
