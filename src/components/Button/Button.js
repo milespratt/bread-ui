@@ -6,7 +6,7 @@ import { Avatar } from "../";
 
 const types = {
   default: {
-    backgroundColor: "#EAEAEC",
+    backgroundColor: "#F5F5F5",
     fontColor: "#282C36",
     text: "Default",
   },

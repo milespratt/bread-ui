@@ -20,9 +20,9 @@ function Avatar(props) {
 
 Avatar.defaultProps = {
   alt: "Avatar Image",
-  backgroundColor: "#282C36",
+  backgroundColor: "#282c36",
   text: "AV",
-  textColor: "#EAEAEC",
+  textColor: "#f5f5f5",
   size: "small",
   radius: false,
 };

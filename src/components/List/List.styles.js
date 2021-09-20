@@ -15,7 +15,7 @@ const ListStyles = styled.div`
     cursor: pointer;
   }
   .list__item:hover {
-    background-color: #EAEAEC;
+    background-color: #f5f5f5;
   }
   .list__icon {
     margin-left: 20px;

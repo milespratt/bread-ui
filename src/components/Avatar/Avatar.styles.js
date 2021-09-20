@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const sizes = {
   micro: { fontSize: "0.7rem", imageSize: "20px" },
-  tiny: { fontSize: "1.5rem", imageSize: "40px" },
+  tiny: { fontSize: "1.4rem", imageSize: "40px" },
   small: { fontSize: "3rem", imageSize: "100px" },
   medium: { fontSize: "5rem", imageSize: "150px" },
   large: { fontSize: "8rem", imageSize: "200px" },

@@ -5,7 +5,7 @@ import BannerStyles from "./Banner.styles";
 
 const types = {
   default: {
-    backgroundColor: "#EAEAEC",
+    backgroundColor: "#F5F5F5",
     fontColor: "#282C36",
     icon: "De",
   },
